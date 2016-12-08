@@ -1,0 +1,7 @@
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Contracts\bin\Release\CNPC.SISDUC.Domain.Contracts.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Contracts\bin\Release\CNPC.SISDUC.Domain.Contracts.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Contracts\bin\Release\CNPC.SISDUC.Model.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Contracts\bin\Release\CNPC.SISDUC.Model.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Contracts\obj\Release\CNPC.SISDUC.Domain.Contracts.csprojResolveAssemblyReference.cache
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Contracts\obj\Release\CNPC.SISDUC.Domain.Contracts.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Contracts\obj\Release\CNPC.SISDUC.Domain.Contracts.pdb

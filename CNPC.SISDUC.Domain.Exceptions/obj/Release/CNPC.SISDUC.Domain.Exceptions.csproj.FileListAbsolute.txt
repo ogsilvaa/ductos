@@ -1,0 +1,4 @@
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Exceptions\bin\Release\CNPC.SISDUC.Domain.Exceptions.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Exceptions\bin\Release\CNPC.SISDUC.Domain.Exceptions.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Exceptions\obj\Release\CNPC.SISDUC.Domain.Exceptions.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain.Exceptions\obj\Release\CNPC.SISDUC.Domain.Exceptions.pdb

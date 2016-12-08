@@ -1,0 +1,17 @@
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Testing.Repository.dll.config
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Testing.Repository.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Testing.Repository.pdb
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Model.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Repository.Contracts.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Repository.SqlServer.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\log4net.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Domain.Exceptions.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Model.pdb
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Repository.Contracts.pdb
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Repository.SqlServer.pdb
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\CNPC.SISDUC.Domain.Exceptions.pdb
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\obj\Debug\CNPC.SISDUC.Testing.Repository.csprojResolveAssemblyReference.cache
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\obj\Debug\CNPC.SISDUC.Testing.Repository.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Testing.Repository\obj\Debug\CNPC.SISDUC.Testing.Repository.pdb

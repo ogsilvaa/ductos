@@ -1,0 +1,130 @@
+﻿@model CNPC.SISDUC.Model.Servicio.AccesorioResponse
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+@if (Model.MensajeError.Length > 0)
+{
+    @Html.DisplayFor(model => model.MensajeError, new { htmlAttributes = new { @class = "bg-danger col-md-5" } })
+}
+else
+{
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Nuevo Accesorio</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.CodigoTuberia, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.CodigoTuberia, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.Item.CodigoTuberia, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.CodigoAccesorio, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.CodigoAccesorio, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.CodigoAccesorio, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.NombreAccesorio, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.NombreAccesorio, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.NombreAccesorio, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.Correlativo, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.Correlativo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.Correlativo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.NPS, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.NPS, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.NPS, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.Schedule, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.Schedule, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.Schedule, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.TipoMaterial, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.TipoMaterial, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.TipoMaterial, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.Longitud, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.Longitud, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.Longitud, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.CoordenadasUTMX, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.CoordenadasUTMX, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.CoordenadasUTMX, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.CoordenadasUTMY, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.CoordenadasUTMY, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.CoordenadasUTMY, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.Observaciones, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.Observaciones, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.Observaciones, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Item.CondicionAccesorio, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(model => model.Item.CondicionAccesorio, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Item.CondicionAccesorio, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

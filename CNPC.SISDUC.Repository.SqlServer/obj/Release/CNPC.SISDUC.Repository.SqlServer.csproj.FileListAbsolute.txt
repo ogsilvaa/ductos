@@ -1,0 +1,11 @@
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\obj\Release\CNPC.SISDUC.Repository.SqlServer.csprojResolveAssemblyReference.cache
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\bin\Release\CNPC.SISDUC.Repository.SqlServer.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\bin\Release\CNPC.SISDUC.Repository.SqlServer.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\bin\Release\CNPC.SISDUC.Model.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\bin\Release\CNPC.SISDUC.Repository.Contracts.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\bin\Release\CNPC.SISDUC.Model.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\bin\Release\CNPC.SISDUC.Repository.Contracts.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\bin\Release\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\obj\Release\CNPC.SISDUC.Repository.SqlServer.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\obj\Release\CNPC.SISDUC.Repository.SqlServer.pdb

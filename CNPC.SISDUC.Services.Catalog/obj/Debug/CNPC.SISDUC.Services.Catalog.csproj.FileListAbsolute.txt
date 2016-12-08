@@ -1,0 +1,4 @@
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Services.Catalog\bin\Debug\CNPC.SISDUC.Services.Catalog.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Services.Catalog\bin\Debug\CNPC.SISDUC.Services.Catalog.pdb
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Services.Catalog\obj\Debug\CNPC.SISDUC.Services.Catalog.dll
+D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Services.Catalog\obj\Debug\CNPC.SISDUC.Services.Catalog.pdb

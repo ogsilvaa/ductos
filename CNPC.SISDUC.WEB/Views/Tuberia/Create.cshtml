@@ -1,0 +1,479 @@
+﻿@model CNPC.SISDUC.WEB.Models.RegistroInspeccionVisualModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Nueva Tuberia</h2>
+
+@using (Html.BeginForm("Create", "Tuberia", FormMethod.Post, new { id = "Editform" })) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal col-md-12">
+       @* <h4>RegistroInspeccionVisualModel</h4>*@
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(model => model.OleoductoID)
+        @Html.HiddenFor(model => model.NumeroOleoducto)
+
+        <div class="form-group">
+            <div class="col-md-12">
+                <label class="control-label col-md-2">Oleoducto</label>
+                <div class="col-md-4">
+                    @*@Html.TextBox("DESCRIPCION", model.oleoducto.Codigo, new { @class = "form-control", @readonly = "readonly" })*@
+                    @Html.EditorFor(model => model.oleoducto.Codigo, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                </div>
+
+                <label class="control-label col-md-2">Descripción</label>
+                <div class="col-md-4">
+                    @*@Html.TextBox("DESCRIPCION", model.oleoducto.Descripcion, new { @class = "form-control", @readonly = "readonly" })*@
+                    @Html.EditorFor(model => model.oleoducto.Descripcion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.CodigoDelTubo01, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(model => model.CodigoDelTubo01, new { @class = "form-control", @MaxLength = "25" })
+                </div>
+
+                @Html.LabelFor(model => model.NumeroAnterior, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(model => model.NumeroAnterior, new { @class = "form-control"} )
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.NPS, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(model => model.NPS, new { @class = "form-control" } )
+                </div>
+
+                @Html.LabelFor(model => model.Schedule, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(model => model.Schedule,  new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.TipoMaterial, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.TextBoxFor(model => model.TipoMaterial, new { @class = "form-control" } )
+                </div>
+
+                @Html.LabelFor(model => model.Longitud, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.TextBoxFor(model => model.Longitud,  new { @class = "form-control" } )
+                </div>
+                @Html.LabelFor(model => model.CoordenadasUTM_X, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.CoordenadasUTM_X, new { @class = "form-control" } )
+                </div>
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.CoordenadasUTM_Y, new { @class = "form-control" } )
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.ExtremoInicial1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoInicial1, new { @class = "form-control" } )
+                </div>
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoInicial2, new { @class = "form-control" } )
+                </div>
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoInicial3, new { @class = "form-control" } )
+                </div>
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoInicial4, new { @class = "form-control" } )
+                </div>
+
+                @Html.LabelFor(model => model.BSCAN, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.BSCAN, new { @class = "form-control" } )
+                </div>
+
+                @Html.LabelFor(model => model.EspesorPared, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.EspesorPared, new { @class = "form-control" } )
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.ExtremoMedio1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoMedio1, new { @class = "form-control" } )
+                </div>
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoMedio2,new { @class = "form-control" } )
+                </div>
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoMedio3, new { @class = "form-control" } )
+                </div>
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoMedio4, new { @class = "form-control" } )
+                </div>
+
+                @Html.LabelFor(model => model.MapeoCorrison, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.MapeoCorrison, new { @class = "form-control" } )
+                </div>
+
+                @Html.LabelFor(model => model.PitCorrosion, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.PitCorrosion, new { @class = "form-control" } )
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.ExtremoFinal1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoFinal1, new { @class = "form-control" } )
+                </div>
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoFinal2, new { @class = "form-control" } )
+                </div>
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoFinal3, new { @class = "form-control" } )
+                </div>
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.ExtremoFinal4, new { @class = "form-control" } )
+                </div>
+
+                @Html.LabelFor(model => model.LEFT_MINIMO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.LEFT_MINIMO,new { @class = "form-control" } )
+                </div>
+
+                @Html.LabelFor(model => model.EspesorRemanente, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.EspesorRemanente, new { @class = "form-control" } )
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.Defecto, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.TextBoxFor(model => model.Defecto, new { @class = "form-control" } )
+                </div>
+
+                @Html.LabelFor(model => model.Defecto2, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.CheckBoxFor(model => model.Defecto2)
+                </div>
+
+                @Html.LabelFor(model => model.NumeroGrapas, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.TextBoxFor(model => model.NumeroGrapas, new { @class = "form-control" } )
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.TipoSoporte, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @*@Html.TextBoxFor(model => model.TipoSoporte,  new { @class = "form-control" })*@
+                    @Html.DropDownListFor(model => model.TipoSoporte, Model.ListaTipoSoporte, new { @class = "form-control" })
+                </div>
+
+                @Html.LabelFor(model => model.Elastomero, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.CheckBoxFor(model => model.Elastomero)
+                </div>
+
+                @Html.LabelFor(model => model.Maleza, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.CheckBoxFor(model => model.Maleza)
+                </div>
+
+                @Html.LabelFor(model => model.TuberiaAlrededor, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.CheckBoxFor(model => model.TuberiaAlrededor)
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.Pintura, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.CheckBoxFor(model => model.Pintura, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+
+                @Html.LabelFor(model => model.CruceCarretera, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.CheckBoxFor(model => model.CruceCarretera, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+
+                @Html.LabelFor(model => model.TipoProteccion, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.TipoProteccion, new { @class = "form-control" })
+                </div>
+
+                @Html.LabelFor(model => model.EstadoProteccion, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.TextBoxFor(model => model.EstadoProteccion,new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                <label class="control-label col-md-2">Motivo</label>
+                <div class="col-md-2">
+                    <select id="ddlmotivo" name="motivo" class="form-control">
+                        <option value="Agregado">Agregar</option>
+                        <option value="Reemplazar">Reemplazar</option>
+                    </select>
+                </div>
+                <label class="control-label col-md-2">Orden Servicio</label>
+                <div class="col-md-2">
+                    <input type="text" class="form-control input-sm limpiar" name="OrdenServicio" id="OrdenServicio" placeholder="Ingrese Orden Servicio">
+                </div>
+                <div id="div_eliminados" style="display:none;">
+                    <label class="control-label col-md-2" >Seleccionar Eliminados</label>
+                    <input type="button" onclick="MostrarDialog()" class="btn btn-danger" value="..." />
+                </div>
+            </div>
+        </div>
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.EstadoTuberia, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.EstadoTuberia, new { @class = "form-control" })
+            </div>
+        </div>*@
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.OleoductoID, "OleoductoID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("OleoductoID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OleoductoID, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+       
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.CodigoDelTubo01, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CodigoDelTubo01, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CodigoDelTubo01, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CodigoDelTubo02, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CodigoDelTubo02, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CodigoDelTubo02, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CodigoDelTubo03, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CodigoDelTubo03, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CodigoDelTubo03, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.NumeroOleoducto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumeroOleoducto, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NumeroOleoducto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SHC, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SHC, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SHC, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.EspesorNominal, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EspesorNominal, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EspesorNominal, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+        
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.UltimaFechaDeInspeccion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UltimaFechaDeInspeccion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UltimaFechaDeInspeccion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SeleccionarTuberia, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.SeleccionarTuberia)
+                    @Html.ValidationMessageFor(model => model.SeleccionarTuberia, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TuberiaId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TuberiaId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TuberiaId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EspesorMinimoRealRemanente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EspesorMinimoRealRemanente, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EspesorMinimoRealRemanente, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ObservacionesDeLaInspeccionVisual, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ObservacionesDeLaInspeccionVisual, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ObservacionesDeLaInspeccionVisual, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CondicionDelTramo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CondicionDelTramo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CondicionDelTramo, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+        <input type="hidden" name="id_marcados" id="id_marcados" value="0" />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar Registro" class="btn btn-primary" />
+                <input type="button" onclick="javascript: window.location.href = '/Tuberia/List/@Model.OleoductoID'" value="Cancelar" class="btn btn-default" />
+                
+            </div>
+        </div>
+    </div>
+}
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog " style="width:1050px;">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" style="color:#ff9242;" id="myModalLabel">Seleccionar Tuberias</h4>
+                </div>
+                <div class="modal-body box" style="border-top:3px solid #ff9242;" id="modal-bodyku">
+                    <section>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    
+                                    @Html.Partial("ListarEliminados", Model.ListaEliminados)
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal-footer" id="modal-footerq">
+                    <input type="button" id="btn_agregar" class="btn btn-primary" value="Guardar" />
+                    <button class="btn" id="btn_agregar_cancelar" aria-hidden="true">Cancelar</button>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    var ids = [];
+    $(document).ready(function () {
+        $("#Editform").submit(function () {
+            var codigo = $("#CodigoDelTubo01").val();
+            if (codigo == "") {
+                alert("Ingrese Codigo");
+                return false;
+            } else
+                return true;
+        });
+
+        $("#ddlmotivo").change(function () {
+            var valor = $(this).val();
+            if(valor == "Agregado") $("#div_eliminados").hide();
+            else $("#div_eliminados").show();
+        });
+        $("#btn_agregar").click(function () {
+            Agregar_Seleccionados();
+        })
+
+        $("#btn_agregar_cancelar").click(function () {
+            //Remover_Seleccionados();
+            $('#myModal').modal('hide');
+        });
+    });
+
+    function Remover_Seleccionados()
+    {
+        $(".chk_selec").each(function () {
+            $(this).prop('checked', false);
+        });
+        $("#id_marcados").val("");
+        $('#myModal').modal('hide');
+    }
+
+    function Agregar_Seleccionados()
+    {
+        ids = [];
+        $(".chk_selec").each(function () {
+            if ($(this).prop('checked'))
+            {
+                var id = $(this).prop('id');
+                ids.push(id.replace("chk_", ""));
+            }
+        });
+        
+        $("#id_marcados").val(ids.toString());
+        $('#myModal').modal('hide');
+    }
+
+
+    function MostrarDialog()
+    {
+        $(".chk_selec").each(function () {
+            $(this).prop('checked', false);
+        });
+        $.each(ids, function (key, value) {
+            $("#chk_" + value).prop('checked', true);
+        });
+        $('#myModal').modal('show');
+    }
+</script>

@@ -1,0 +1,13 @@
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\obj\Release\CNPC.SISDUC.Domain.csprojResolveAssemblyReference.cache
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Release\CNPC.SISDUC.Domain.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Release\CNPC.SISDUC.Domain.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Release\CNPC.SISDUC.Domain.Contracts.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Release\CNPC.SISDUC.Domain.Exceptions.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Release\CNPC.SISDUC.Model.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Release\CNPC.SISDUC.Repository.Contracts.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Release\CNPC.SISDUC.Domain.Contracts.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Release\CNPC.SISDUC.Domain.Exceptions.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Release\CNPC.SISDUC.Model.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Release\CNPC.SISDUC.Repository.Contracts.pdb
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\obj\Release\CNPC.SISDUC.Domain.dll
+D:\Datos\CNPC\DUCTOS_V11\CNPC.SISDUC\CNPC.SISDUC.Domain\obj\Release\CNPC.SISDUC.Domain.pdb
