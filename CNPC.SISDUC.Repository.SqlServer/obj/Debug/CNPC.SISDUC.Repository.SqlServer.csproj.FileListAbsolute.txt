@@ -10,3 +10,14 @@ D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServe
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\obj\Debug\CNPC.SISDUC.Repository.SqlServer.csprojResolveAssemblyReference.cache
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\obj\Debug\CNPC.SISDUC.Repository.SqlServer.dll
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Repository.SqlServer\obj\Debug\CNPC.SISDUC.Repository.SqlServer.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\bin\Debug\CNPC.SISDUC.Repository.SqlServer.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\bin\Debug\CNPC.SISDUC.Repository.SqlServer.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\bin\Debug\CNPC.SISDUC.Model.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\bin\Debug\CNPC.SISDUC.Repository.Contracts.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\bin\Debug\CNPC.SISDUC.Model.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\bin\Debug\CNPC.SISDUC.Repository.Contracts.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\obj\Debug\CNPC.SISDUC.Repository.SqlServer.csprojResolveAssemblyReference.cache
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\obj\Debug\CNPC.SISDUC.Repository.SqlServer.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.SqlServer\obj\Debug\CNPC.SISDUC.Repository.SqlServer.pdb

@@ -5,3 +5,10 @@ D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Repository.Contract
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Repository.Contracts\obj\Debug\CNPC.SISDUC.Repository.Contracts.csprojResolveAssemblyReference.cache
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Repository.Contracts\obj\Debug\CNPC.SISDUC.Repository.Contracts.dll
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Repository.Contracts\obj\Debug\CNPC.SISDUC.Repository.Contracts.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.Contracts\bin\Debug\CNPC.SISDUC.Repository.Contracts.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.Contracts\bin\Debug\CNPC.SISDUC.Repository.Contracts.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.Contracts\bin\Debug\CNPC.SISDUC.Model.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.Contracts\bin\Debug\CNPC.SISDUC.Model.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.Contracts\obj\Debug\CNPC.SISDUC.Repository.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.Contracts\obj\Debug\CNPC.SISDUC.Repository.Contracts.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Repository.Contracts\obj\Debug\CNPC.SISDUC.Repository.Contracts.pdb

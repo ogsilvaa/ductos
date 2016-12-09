@@ -39,9 +39,10 @@ namespace CNPC.SISDUC.Repository.Contracts
     {
         IEnumerable<Oleoducto> BuscarByNombre(string Nombre);
         decimal LongitudOleoducto(int Id);
-        OleoductoResponse FilterByName(string Nombre, int page, int records);
-        List<Oleoducto> GetListOleoductosByNombre(string Nombre);
+        OleoductoResponse FilterByName(string prefijo,string Nombre, int page, int records);
+        List<Oleoducto> GetListOleoductosByNombre(string prefijo,string Nombre);
         Oleoducto FilterByID(int ID);
+        List<Inventario> ObtenerInventario();
     }
     public interface ITipoSoporteRepositorio : IRepositorio<TipoSoporte>
     {

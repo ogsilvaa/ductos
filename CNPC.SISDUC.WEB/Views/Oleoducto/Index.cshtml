@@ -1,7 +1,7 @@
 ﻿@*@model  CNPC.SISDUC.Model.Servicio.OleoductoResponse*@
 @model PagedList.IPagedList<CNPC.SISDUC.Web.Models.OleoductoViewModel>
 @using PagedList.Mvc;
- 
+
 <div id="content">
     <table border="0" cellpadding="0" cellspacing="0">
         <tr>
@@ -12,11 +12,11 @@
                         @*<input type="text" class="form-control" ng-model="parameterlist.name" placeholder="Buscar" ng-keyup="firstPage()">*@
                         @Html.TextBox("Search", null, new { @class = "form-control" })
                         <span class="input-group-btn">
-                            <input class="btn btn-danger" type="submit" value="Buscar"/>
+                            <input class="btn btn-danger" type="submit" value="Buscar" />
                         </span>
                     </div>
                 }
-                
+
             </td>
         </tr>
     </table>
@@ -41,7 +41,7 @@
             <tr>
                 <td width="5%" align="center" class="celda2_grilla">@item.Id</td>
                 <td width="8%" class="celda2_grilla">@item.Codigo</td>
-                <td width="27%" class="celda2_grilla">@item.Descripcion</td>    
+                <td width="27%" class="celda2_grilla">@item.Descripcion</td>
                 <td width="17%" class="celda2_grilla">@item.NoLamina</td>
                 <td width="8%" class="celda2_grilla">@item.Ubicacion</td>
                 <td width="8%" class="celda2_grilla">@item.LongitudTotal</td>
@@ -66,7 +66,7 @@
                         <tr>
                             <td align="right" class="texto" style="text-align:right">
                                 Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
-                                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, prefijo = Request.Params["prefijo"] }))
                             </td>
                         </tr>
                     </tbody>
@@ -86,8 +86,8 @@
                                     <td class="button">
                                         @Html.ActionLink("Agregar Oleoducto", "Create")
                                         @*<a href="#" onclick="agregarOleoducto()">
-                                            
-                                        </a>*@
+
+                                            </a>*@
                                     </td>
                                 </table>
                             </td>

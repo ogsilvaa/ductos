@@ -46,6 +46,7 @@
     <Compile Include="Entities\CambiosTuberia.cs" />
     <Compile Include="Entities\Constantes.cs" />
     <Compile Include="Entities\IEnumerableExtensions.cs" />
+    <Compile Include="Entities\Inventario.cs" />
     <Compile Include="Entities\Oleoducto.cs" />
     <Compile Include="Entities\RegistroInspeccionVisual.cs" />
     <Compile Include="Entities\uspGetCountOleoductos_Result.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Servicio\AccesoriosRequest.cs" />
     <Compile Include="Servicio\CambiosTuberiaRequest.cs" />
     <Compile Include="Servicio\CambiosTuberiaResponse.cs" />
+    <Compile Include="Servicio\InventarioResponse.cs" />
     <Compile Include="Servicio\ListRequest.cs" />
     <Compile Include="Servicio\ListResponse.cs" />
     <Compile Include="Servicio\ObjectRequest.cs" />

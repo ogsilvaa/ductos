@@ -35,6 +35,7 @@ namespace CNPC.SISDUC.Domain.Contracts
     {
         IEnumerable<Oleoducto> BuscarByNombre(string Nombre);
         decimal LongitudOleoducto(int Id);
+        List<Inventario> ObtenerInventario();
     }
     public interface ITipoSoporteDomain : IDominio<Oleoducto>
     {

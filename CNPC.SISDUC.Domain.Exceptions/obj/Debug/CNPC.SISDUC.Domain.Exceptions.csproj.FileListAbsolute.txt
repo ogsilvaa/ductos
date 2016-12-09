@@ -3,3 +3,7 @@ D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Domain.Exceptions\b
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Domain.Exceptions\obj\Debug\CNPC.SISDUC.Domain.Exceptions.csprojResolveAssemblyReference.cache
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Domain.Exceptions\obj\Debug\CNPC.SISDUC.Domain.Exceptions.dll
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Domain.Exceptions\obj\Debug\CNPC.SISDUC.Domain.Exceptions.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain.Exceptions\bin\Debug\CNPC.SISDUC.Domain.Exceptions.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain.Exceptions\bin\Debug\CNPC.SISDUC.Domain.Exceptions.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain.Exceptions\obj\Debug\CNPC.SISDUC.Domain.Exceptions.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain.Exceptions\obj\Debug\CNPC.SISDUC.Domain.Exceptions.pdb

@@ -2,3 +2,7 @@ D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Model\bin\Debug\CNP
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Model\bin\Debug\CNPC.SISDUC.Model.pdb
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Model\obj\Debug\CNPC.SISDUC.Model.dll
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Model\obj\Debug\CNPC.SISDUC.Model.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Model\bin\Debug\CNPC.SISDUC.Model.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Model\bin\Debug\CNPC.SISDUC.Model.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Model\obj\Debug\CNPC.SISDUC.Model.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Model\obj\Debug\CNPC.SISDUC.Model.pdb

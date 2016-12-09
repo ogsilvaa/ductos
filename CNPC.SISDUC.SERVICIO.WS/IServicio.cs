@@ -14,9 +14,11 @@ namespace CNPC.SISDUC.SERVICIO.WCF
         [OperationContract]
         OleoductoResponse OleoductoEnviarActualizaciones(OleoductoListaRequest request);
         [OperationContract]
-        OleoductoResponse OleoductoListarEntidad(string search = null, int page = 1, int rowsPerPage = 10);
+        OleoductoResponse OleoductoListarEntidad(string prefijo, string search = null, int page = 1, int rowsPerPage = 10);
         [OperationContract]
-        OleoductoResponse OleoductoListarAllEntidad(string nombre);
+        OleoductoResponse OleoductoListarAllEntidad(string prefijo, string nombre);
+        [OperationContract]
+        InventarioResponse ObtenerInventario();
 
         //Registro de Inspeccion Visual
         [OperationContract]
@@ -26,7 +28,7 @@ namespace CNPC.SISDUC.SERVICIO.WCF
         //[OperationContract]
         //RegistroInspeccionVisualResponse RegistroInspeccionVisualListarEntidad(int oleoductoId, string search = "", int page = 1, int rowsPerPage = 10);
         [OperationContract]
-        RegistroInspeccionVisualResponse RegistroInspeccionVisualListarByDucto(int ductoId, string search = "", string Estado = null);
+        RegistroInspeccionVisualResponse RegistroInspeccionVisualListarByDucto(int ductoId, string search = "", string Estado = null, int anio = 0);
         [OperationContract]
         RegistroInspeccionVisualResponse RegistroInspeccionVisualListarEliminados(int anio, int ductoId);
 

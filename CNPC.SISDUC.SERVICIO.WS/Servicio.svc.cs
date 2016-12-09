@@ -67,14 +67,14 @@ namespace CNPC.SISDUC.SERVICIO.WCF
         {
             throw new NotImplementedException();
         }
-        public OleoductoResponse OleoductoListarAllEntidad(string nombre)
+        public OleoductoResponse OleoductoListarAllEntidad(string prefijo, string nombre)
         {
             OleoductoResponse response = new OleoductoResponse();
             try
             {
                 using (var dominio = new OleoductoDomain())
                 {
-                    response.List = dominio.GetListOleoductosByNombre(nombre);
+                    response.List = dominio.GetListOleoductosByNombre(prefijo, nombre);
                     response.Resultado = true;
                 }
             }
@@ -85,14 +85,14 @@ namespace CNPC.SISDUC.SERVICIO.WCF
             }
             return response;
         }
-        public OleoductoResponse OleoductoListarEntidad(string search = null, int page = 1, int rowsPerPage = 10)
+        public OleoductoResponse OleoductoListarEntidad(string prefijo, string search = null, int page = 1, int rowsPerPage = 10)
         {
             OleoductoResponse response = null;
             try
             {
                 using (var dominio = new OleoductoDomain())
                 {
-                    response = dominio.FilterByName(search, page, rowsPerPage);
+                    response = dominio.FilterByName(prefijo, search, page, rowsPerPage);
                     response.Resultado = true;
                 }
             }
@@ -105,6 +105,24 @@ namespace CNPC.SISDUC.SERVICIO.WCF
             return response;
         }
 
+        public InventarioResponse ObtenerInventario()
+        {
+            var response = new InventarioResponse();
+            try
+            {
+                using (var dominio = new OleoductoDomain())
+                {
+                    response.List = dominio.ObtenerInventario();
+                    response.Resultado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Resultado = false;
+                Log.ErrorFormat(LogMensajes.ErrorGenericoFormat, ex.Message, ex.StackTrace);
+            }
+            return response;
+        }
 
         //Servicio para CambiosTuberia
         public CambiosTuberiaResponse CambiosTuberiaEjecutarOperacion(CambiosTuberiaRequest request)
@@ -369,7 +387,7 @@ namespace CNPC.SISDUC.SERVICIO.WCF
             return response;
         }
 
-        public RegistroInspeccionVisualResponse RegistroInspeccionVisualListarByDucto(int ductoId, string search = "", string Estado = null)
+        public RegistroInspeccionVisualResponse RegistroInspeccionVisualListarByDucto(int ductoId, string search = "", string Estado = null, int anio = 0)
         {
 
             RegistroInspeccionVisualResponse response = new RegistroInspeccionVisualResponse();
@@ -377,7 +395,7 @@ namespace CNPC.SISDUC.SERVICIO.WCF
             {
                 using (var dominio = new RegistroInspeccionVisualDomain())
                 {
-                    response.List = dominio.GetListRegistroInspeccionVisualByNombre(DateTime.Now.Year, ductoId, search).ToList();
+                    response.List = dominio.GetListRegistroInspeccionVisualByNombre(anio, ductoId, search).ToList();
                     using (var dominioOleoducto = new OleoductoDomain())
                     {
                         response.oleoducto = dominioOleoducto.FilterByID(ductoId);

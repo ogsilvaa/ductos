@@ -1,4 +1,5 @@
-﻿@using CNPC.SISDUC.Web.Models;
+﻿@using CNPC.SISDUC.Model
+@using CNPC.SISDUC.Web.Proxy
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,7 +73,18 @@
                             <li class="dropdown ">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">GESTION DE DUCTOS<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="~/Oleoducto">Oleoducto</a></li>
+                                    @{
+                                        var prefijos = new Dictionary<string, string> { { "OLB", "Oleoducto" }, { "GAP", "Gasoducto" } };
+                                        var inventario = Session["Inventarios"] as Inventario[];
+                                        foreach (var key in prefijos.Keys)
+                                        {
+                                            <li><b>@(prefijos[key])</b></li>
+                                            foreach (var anio in inventario.Where(x => x.Prefijo == key).Select(x => x.Anio))
+                                            {
+                                                <li><a href="~/Oleoducto?prefijo=@(key)&anio=@(anio)">@(anio)</a></li>
+                                            }
+                                        }
+                                    }
                                     @*<li><a href="/Tuberia">Tuberia</a></li>
                                         <li role="separator" class="divider"></li>
                                         <li><a href="EnContruccion.html">Mediciones de Extremos</a></li>
@@ -101,8 +113,8 @@
     <!--Fin de Librerias JQuery y Bootstrap-->
     @*<link href="~/Content/app.css" rel="stylesheet" />*@
     <script>
-        $(function () { 
-            $('.datepicker').datepicker(); 
+        $(function () {
+            $('.datepicker').datepicker();
         });
     </script>
 </body>

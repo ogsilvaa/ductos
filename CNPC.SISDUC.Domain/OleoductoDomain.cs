@@ -14,6 +14,21 @@ namespace CNPC.SISDUC.Domain
     public class OleoductoDomain : IOleoductoDomain
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(OleoductoDomain));
+
+        public List<Inventario> ObtenerInventario()
+        {
+            IEnumerable<Inventario> inventarios;
+            using (var oleoductoRepositorio = Factory<IOleoductoRepositorio>.GetInstancia())
+            {
+                inventarios = oleoductoRepositorio.ObtenerInventario();
+                if (inventarios == null)
+                {
+                    throw new OleoductosInexistenteException();
+                }
+            }
+            return inventarios.ToList();
+        }
+
         public Oleoducto Agregar(Oleoducto newDucto)
         {
             Oleoducto Result = null;
@@ -100,12 +115,12 @@ namespace CNPC.SISDUC.Domain
             }
             return oleoductos.ToList();
         }
-        public OleoductoResponse FilterByName(string Nombre, int page, int records)
+        public OleoductoResponse FilterByName(string prefijo, string Nombre, int page, int records)
         {
             OleoductoResponse oleoductos = null;
             using (IOleoductoRepositorio oleoductoRepositorio = Factory<IOleoductoRepositorio>.GetInstancia())
             {
-                oleoductos = oleoductoRepositorio.FilterByName(Nombre, page, records);
+                oleoductos = oleoductoRepositorio.FilterByName(prefijo, Nombre, page, records);
                 if (oleoductos == null)
                 {
                     throw new OleoductoInexistenteException();
@@ -113,12 +128,12 @@ namespace CNPC.SISDUC.Domain
             }
             return oleoductos;
         }
-        public List<Oleoducto> GetListOleoductosByNombre(string Nombre)
+        public List<Oleoducto> GetListOleoductosByNombre(string prefijo, string Nombre)
         {
-            List<Oleoducto> Result = null;
+            List<Oleoducto> Result;
             using (IOleoductoRepositorio oleoductoRepositorio = Factory<IOleoductoRepositorio>.GetInstancia())
             {
-                Result = oleoductoRepositorio.GetListOleoductosByNombre(Nombre);
+                Result = oleoductoRepositorio.GetListOleoductosByNombre(prefijo, Nombre);
                 if (Result == null)
                 {
                     throw new OleoductosInexistenteException();

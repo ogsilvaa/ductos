@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using PagedList;
 using CNPC.SISDUC.Model;
 using System.Collections.Generic;
+using System.Configuration;
 using CNPC.SISDUC.WEB.Models;
 using CNPC.SISDUC.Web.Proxy;
 using log4net;
@@ -222,7 +223,7 @@ namespace CNPC.SISDUC.WEB.Controllers
 
         [HttpGet]
         //public ActionResult List(int id, int page, string search = "", int pageSize = 10)
-        public ActionResult List(int id)
+        public ActionResult List(int id, int page = 1)
         {
             Log.Info("call: TuberiaController.List (" + id + ")");
             RegistroInspeccionVisualResponse Resultado = new RegistroInspeccionVisualResponse();
@@ -230,11 +231,12 @@ namespace CNPC.SISDUC.WEB.Controllers
 
             ServicioClient proxy = new ServicioClient();
             string error = String.Empty;
-            
+
             try
             {
+                var anio = Convert.ToInt32(Session["Anio"]);
                 Log.Info("call: RegistroInspeccionVisualListarByDucto (" + id + ")");
-                Resultado = proxy.RegistroInspeccionVisualListarByDucto(id, "", "A");
+                Resultado = proxy.RegistroInspeccionVisualListarByDucto(id, "", "A", anio);
                 Log.Info("Registros encontrados " + Resultado.List.Length);
 
                 OleoductoResponse oleoducto =
@@ -253,8 +255,8 @@ namespace CNPC.SISDUC.WEB.Controllers
             {
                 Log.ErrorFormat(LogMensajes.ErrorGenericoFormat, ex.Message, ex.StackTrace);
             }
-            int pageNumber = 1;
-            return View(modelo.ToPagedList(pageNumber, 10));
+            //int pageNumber = 1;
+            return View(modelo.ToPagedList(page, 10));
         }
 
         [HttpGet]
@@ -274,7 +276,7 @@ namespace CNPC.SISDUC.WEB.Controllers
                     resultado = proxy.RegistroInspeccionVisualEjecutarOperacion(registro);
                     resultado.ListTipoSoporte = proxy.TipoSoporteListarAllEntidad();
 
-                    
+
                     modelo = resultado.Item.ConvertToViewModel();
 
                     List<SelectListItem> list = new List<SelectListItem>();

@@ -12,6 +12,25 @@ namespace CNPC.SISDUC.Repository.SqlServer
     public class OleoductoRepositorio : IOleoductoRepositorio
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(OleoductoRepositorio));
+
+        public List<Inventario> ObtenerInventario()
+        {
+            var result = new List<Inventario>();
+            using (var helper = new SqlHelper(Util.Conexion()))
+            {
+                var reader = helper.ExecuteReader("uspGetInventarios");
+                while (reader.Read())
+                {
+                    var item = new Inventario
+                    {
+                        Prefijo = reader.SafeGetString("prefijo", ""),
+                        Anio = reader.SafeGetInt32("AnioInspeccion", 0)
+                    };
+                    result.Add(item);
+                }
+            }
+            return result;
+        }
         public bool Actualizar(Oleoducto item)
         {
             bool result = false;
@@ -177,13 +196,13 @@ namespace CNPC.SISDUC.Repository.SqlServer
             return BuscarPorId(ID);
         }
 
-        public OleoductoResponse FilterByName(string Nombre, int page, int records)
+        public OleoductoResponse FilterByName(string prefijo, string Nombre, int page, int records)
         {
             OleoductoResponse Result = new OleoductoResponse();
             using (SqlHelper helper = new SqlHelper(Util.Conexion()))
             {
                 List<ParametroSP> parametros = new List<ParametroSP>();
-                parametros.Add(new ParametroSP("@TipoDucto", SqlDbType.Int, 0, "OLB"));
+                parametros.Add(new ParametroSP("@TipoDucto", SqlDbType.Int, 0, prefijo));
                 parametros.Add(new ParametroSP("@Nombre", SqlDbType.VarChar, 50, Nombre));
                 parametros.Add(new ParametroSP("@Page", SqlDbType.Int, 0, page));
                 parametros.Add(new ParametroSP("@Records", SqlDbType.Int, 0, records));
@@ -220,13 +239,13 @@ namespace CNPC.SISDUC.Repository.SqlServer
             return Result;
         }
 
-        public List<Oleoducto> GetListOleoductosByNombre(string Nombre)
+        public List<Oleoducto> GetListOleoductosByNombre(string prefijo, string Nombre)
         {
             List<Oleoducto> Result = new List<Oleoducto>();
             using (SqlHelper helper = new SqlHelper(Util.Conexion()))
             {
                 List<ParametroSP> parametros = new List<ParametroSP>();
-                parametros.Add(new ParametroSP("@TipoDucto", SqlDbType.VarChar, 50, "OLB"));
+                parametros.Add(new ParametroSP("@TipoDucto", SqlDbType.VarChar, 50, prefijo));
                 parametros.Add(new ParametroSP("@Nombre", SqlDbType.VarChar, 50, Nombre));
 
                 var reader = helper.ExecuteReader("uspGetListOleoductosByNombre", parametros);

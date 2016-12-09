@@ -7,7 +7,7 @@ namespace CNPC.SISDUC.Presentacion.Proxy
 {
     public class OleoductoAgenteProxy
     {
-        public IEnumerable<OleoductoViewModel> GetLista(ref string error, int n = 1, int f = 10, string search = null)
+        public IEnumerable<OleoductoViewModel> GetLista(ref string error, int n = 1, int f = 10, string search = null, string prefijo = null)
         {
             IEnumerable<OleoductoViewModel> lista = null;
             try
@@ -15,7 +15,7 @@ namespace CNPC.SISDUC.Presentacion.Proxy
                 OleoductoResponse response;
                 using (var proxy = new ServicioClient())
                 {
-                    response = proxy.OleoductoListarEntidad(search, n, f);
+                    response = proxy.OleoductoListarEntidad(prefijo, search, n, f);
                 }
                 if (response.List == null)
                 {

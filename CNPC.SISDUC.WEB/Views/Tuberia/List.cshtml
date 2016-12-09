@@ -54,6 +54,7 @@
             <th align="center" class="titulo_grilla">Ver</th>
             <th align="center" class="titulo_grilla">Accesorios</th>
             <!--<th align="center" class="titulo_grilla">Accesorios</th>-->
+            <th algin="center">@Html.CheckBox("chkTodos")</th>
         </tr>
     </thead>
     <tbody>
@@ -91,16 +92,19 @@
                 <td align="center">
                     @*<a href="/Accesorios/Index/@item.CodigoDelTubo">*@
                     <a href="@Url.Action("Index", "Accesorios", new { TuberiaId = @item.Id })">
-                    <img src="Content/img/ico-editar.png" width="17" height="17" alt="" style="border:none;" />
+                        <img src="Content/img/ico-editar.png" width="17" height="17" alt="" style="border:none;" />
                     </a>
                 </td>
                 @*<td>
-                    <a href="#" ng-click="agragarAccesorio(item)"><img src="../../Content/img/ico_select.png" width="14" height="14" alt="" style="border:none;" /></a>
-                </td>*@
+                        <a href="#" ng-click="agragarAccesorio(item)"><img src="../../Content/img/ico_select.png" width="14" height="14" alt="" style="border:none;" /></a>
+                    </td>*@
+                <td>
+                    @Html.CheckBox("chkGenerarReporte", new { value = @item.Id })
+                </td>
             </tr>
         }
         <tr>
-            <td colspan="16" align="center">
+            <td colspan="17" align="center">
                 <table width="30%" border="0" align="left">
                     <tbody>
                         <tr>
@@ -170,7 +174,7 @@
                                     </td>
                                 </table>
                             </td>
-                            <td>
+                            @*<td>
                                 <table border="0" align="left">
                                     <td class="button">
                                         <a href="#" ng-click="TablaResumen()">
@@ -178,7 +182,7 @@
                                         </a>
                                     </td>
                                 </table>
-                            </td>
+                            </td>*@
                             <td>
                                 <table border="0" align="left">
                                     <td class="button">
@@ -1133,10 +1137,57 @@
 </div>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script>
+
     $(document).ready(function () {
         //$("#displayinmodal").dialog({
         //    autoOpen: true
         //});
+        var ids = { todos: false, ids: [] };
+
+        if (localStorage.ids) {
+            ids = JSON.parse(localStorage.ids);
+        } else {
+            ids = { todos: false, ids: [] };
+        }
+
+        if (ids.todos) {
+            $("[name='chkTodos']")[0].checked = true;
+            $("[name='chkGenerarReporte']").each(function (idx, chk) {
+                chk.checked = true;
+            });
+        } else {
+            $("[name='chkGenerarReporte']").filter(function (idx, chk) {
+                return ids.ids.indexOf(chk.value) > -1;
+            }).each(function (idx, chk) {
+                chk.checked = true;
+            });
+        }
+
+        var juntaIds = function () {
+            $("[name='chkGenerarReporte']").each(function (idx, chk) {
+                if (chk.checked) {
+                    if (ids.ids.indexOf(chk.value) == -1) {
+                        ids.ids.push(chk.value);
+                    }
+                } else if (ids.ids.indexOf(chk.value) > -1) {
+                    ids.ids.splice(ids.ids.indexOf(chk.value), 1);
+                }
+            });
+            localStorage.ids = JSON.stringify(ids);
+        };
+        $(".pagination").find("li:not([class])").find("a").click(function () {
+            if (!ids.todos) {
+                juntaIds();
+            }
+        });
+        $("[name='chkTodos']").click(function () {
+            ids.todos = $("[name='chkTodos']")[0].checked;
+            ids.ids = new Array();
+            $("[name='chkGenerarReporte']").each(function (idx, chk) {
+                chk.checked = ids.todos;
+            });
+            localStorage.ids = JSON.stringify(ids);
+        });
     });
 
     function EliminarRegistro(codigo, idoleo, id) {

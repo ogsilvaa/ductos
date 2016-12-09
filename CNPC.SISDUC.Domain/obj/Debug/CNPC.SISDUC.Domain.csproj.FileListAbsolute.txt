@@ -12,3 +12,16 @@ D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Domain\bin\Debug\CN
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Domain\obj\Debug\CNPC.SISDUC.Domain.csprojResolveAssemblyReference.cache
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Domain\obj\Debug\CNPC.SISDUC.Domain.dll
 D:\Datos\CNPC\DUCTOS_V10\CNPC.SISDUC\CNPC.SISDUC\CNPC.SISDUC.Domain\obj\Debug\CNPC.SISDUC.Domain.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\bin\Debug\CNPC.SISDUC.Domain.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\bin\Debug\CNPC.SISDUC.Domain.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\bin\Debug\CNPC.SISDUC.Domain.Contracts.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\bin\Debug\CNPC.SISDUC.Domain.Exceptions.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\bin\Debug\CNPC.SISDUC.Model.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\bin\Debug\CNPC.SISDUC.Repository.Contracts.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\bin\Debug\CNPC.SISDUC.Domain.Contracts.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\bin\Debug\CNPC.SISDUC.Domain.Exceptions.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\bin\Debug\CNPC.SISDUC.Model.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\bin\Debug\CNPC.SISDUC.Repository.Contracts.pdb
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\obj\Debug\CNPC.SISDUC.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\obj\Debug\CNPC.SISDUC.Domain.dll
+C:\Users\Gonzalo\Documents\GitHub\ductos\CNPC.SISDUC.Domain\obj\Debug\CNPC.SISDUC.Domain.pdb

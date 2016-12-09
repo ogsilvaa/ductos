@@ -18,6 +18,10 @@ namespace CNPC.SISDUC.WEB.Controllers
             //{
             //    Log.ErrorFormat(LogMensajes.ErrorGenericoFormat, ex.Message, ex.StackTrace);
             //}
+            var proxy = new ServicioClient();
+            var listado = proxy.ObtenerInventario();
+            Session.Add("Inventarios", listado.List);
+
             return View();
         }
 

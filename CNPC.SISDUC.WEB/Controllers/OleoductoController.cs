@@ -15,15 +15,16 @@ namespace CNPC.SISDUC.WEB.Controllers
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(OleoductoController));
         // GET: Oleoducto
-        public ActionResult Index(int? page, string search = "", int pageSize = 10)
+        public ActionResult Index(string prefijo, int anio, int? page, string search = "", int pageSize = 10)
         {
-            Log.Info("Call: OleoductoController.Index(page: " + page + ", search: " + search + ", pagesize: " + pageSize + ")");
+            Log.Info("Call: OleoductoController.Index(prefijo: " + prefijo + " anio: " + anio + ", page: " + page + ", search: " + search + ", pagesize: " + pageSize + ")");
+            Session.Add("Anio", anio);
             ServicioClient proxy = new ServicioClient();
-            string error = String.Empty;
+            string error = string.Empty;
             OleoductoResponse listado = new OleoductoResponse();
             try
             {
-                listado = proxy.OleoductoListarAllEntidad(search);
+                listado = proxy.OleoductoListarAllEntidad(prefijo, search);
 
                 Log.Info("Cantidad de Oleoductos: " + listado.List.Length);
 
